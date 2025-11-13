@@ -127,7 +127,7 @@ button {
 }
 
 .indisponivel {
-    background-color: #ff0000;
+    background-color: #ff7c7c;
     opacity: 0.6;
     cursor: not-allowed;
 }

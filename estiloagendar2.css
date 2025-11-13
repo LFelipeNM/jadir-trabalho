@@ -1,0 +1,148 @@
+/* Reset geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: "Arial", sans-serif;
+}
+
+/* Fundo geral */
+body {
+    background-color: #5eb6b8; /* Azul claro */
+    color: #fff;
+}
+
+/* Container principal */
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+/* Cabeçalho */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 28px;
+    line-height: 1.2;
+    color: #1c4b50;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #003333;
+    font-weight: 600;
+}
+
+.user-icon {
+    background-color: #99e5a4;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Título principal */
+.title {
+    text-align: center;
+    margin-top: 40px;
+    color: #000;
+    font-weight: 600;
+}
+
+/* Conteúdo principal */
+.content {
+    background-color: #0d4f57;
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 30px;
+    color: #fff;
+    flex-grow: 1;
+}
+
+/* Abas */
+.tabs {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.tabs span {
+    color: #8ac6c8;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tabs .active {
+    color: #fff;
+}
+
+/* Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #fff;
+}
+
+th {
+    text-align: left;
+    padding-bottom: 15px;
+    font-weight: bold;
+}
+
+td {
+    padding: 10px 0;
+}
+
+/* Botões */
+button {
+    border: none;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #000;
+}
+
+.confirmar {
+    background-color: #8aff7c;
+}
+
+.indisponivel {
+    background-color: #ff0000;
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Botão de Sair */
+.logout-btn {
+    background-color: #f44336; /* Vermelho */
+    color: #fff; /* Texto branco */
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background-color: #d32f2f; /* Tom mais escuro de vermelho ao passar o mouse */
+}

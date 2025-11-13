@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Consulta - Dental Clinic</title>
+    <link rel="stylesheet" href="estiloagendar2.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <h1>DENTAL<br>CLINIC</h1>
+            </div>
+            <div class="user-info">
+                <span>OLÁ, MARIA EDUARDA</span>
+                <div class="user-icon">👤</div>
+                <a href="index.html" class="logout-btn">Sair</a>
+            </div>
+        </div>
+
+        <h2 class="title">AGENDAR CONSULTA</h2>
+
+        <div class="content">
+            <div class="tabs">
+                <span class="active">AGENDAR CONSULTA</span>
+                <span>VER AGENDAMENTOS</span>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID_DENTISTA</th>
+                        <th>NOME_DENTISTA</th>
+                        <th>ESPECIALIDADE</th>
+                        <th>DATA E HORA</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>DR. LUCIO</td>
+                        <td>Ortodontia</td>
+                        <td>12-11-2025 09:00</td>
+                        <td><a href="agendar3.html"><button class="confirmar">Confirmar agendamento</button></a></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>DR.A ANA</td>
+                        <td>Endodontia</td>
+                        <td>12-11-2025 10:00</td>
+                        <td><button class="indisponivel">Horário indisponível</button></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>DR. RENATO</td>
+                        <td>Dentística</td>
+                        <td>12-11-2025 11:00</td>
+                        <td><button class="indisponivel">Horário indisponível</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

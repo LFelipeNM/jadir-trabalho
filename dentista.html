@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dentista - Dental Clinic</title>
+    <link rel="stylesheet" href="estilodentista.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="logo">DENTAL<br>CLINIC</h1>
+            <h2 class="title">DENTISTA</h2>
+            <div class="user-info">
+                <span>OLÁ, DR. LUCIO</span>
+                <div class="icon">👤</div>
+                <a href="index.html" class="logout-btn">Sair</a>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="table-box">
+                <h3>Consultas Agendadas</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID_CONSULTA</th>
+                            <th>DIA E HORÁRIO</th>
+                            <th>ID_PACIENTE</th>
+                            <th>NOME_PACIENTE</th>
+                            <th>STATUS</th>
+                            <th>OBSERVAÇÃO</th>
+                            <th>FINALIZADA</th>
+                            <th>AÇÃO</th> <!-- Nova coluna para o botão de Salvar -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="ID_CONSULTA">1</td>
+                            <td data-label="DIA E HORÁRIO">12-11-2025 09:00</td>
+                            <td data-label="ID_PACIENTE">1</td>
+                            <td data-label="NOME_PACIENTE">MARIA EDUARDA</td>
+                            <td data-label="STATUS"><input type="checkbox" checked></td>
+                            <td data-label="OBSERVAÇÃO" class="note" onclick="openObservation(this)">🗒️</td>
+                            <td data-label="FINALIZADA" onclick="editFinalizada(this)">NÃO</td>
+                            <td data-label="AÇÃO">
+                                <button onclick="saveConsultation(this)">Salvar</button> <!-- Botão Salvar para cada linha -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="ID_CONSULTA">4</td>
+                            <td data-label="DIA E HORÁRIO">18-11-2025 11:00</td>
+                            <td data-label="ID_PACIENTE">1</td>
+                            <td data-label="NOME_PACIENTE">MARIA EDUARDA</td>
+                            <td data-label="STATUS"><input type="checkbox" checked></td>
+                            <td data-label="OBSERVAÇÃO" class="note" onclick="openObservation(this)">🗒️</td>
+                            <td data-label="FINALIZADA" onclick="editFinalizada(this)">NÃO</td>
+                            <td data-label="AÇÃO">
+                                <button onclick="saveConsultation(this)">Salvar</button> <!-- Botão Salvar para cada linha -->
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para edição de Observação -->
+    <div id="observationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h3>Adicionar Observação</h3>
+            <textarea id="observationText" placeholder="Digite a observação..."></textarea>
+            <button onclick="saveObservation()">Salvar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

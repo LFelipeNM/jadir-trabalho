@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recepção - Dental Clinic</title>
+    <link rel="stylesheet" href="estilorecepcao.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="logo">DENTAL<br>CLINIC</h1>
+            <h2 class="title">RECEPÇÃO</h2>
+            <div class="user-info">
+                <span>OLÁ, Wendell</span>
+                <div class="icon">👤</div>
+                <!-- Adicionando o botão "Sair" -->
+                <a href="index.html" class="logout-btn">Sair</a>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="table-box">
+                <h3>Consultas Agendadas</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID_CONSULTA</th>
+                            <th>DIA E HORÁRIO</th>
+                            <th>ID_PACIENTE</th>
+                            <th>NOME_PACIENTE</th>
+                            <th>ID_DENTISTA</th>
+                            <th>NOME_DENTISTA</th>
+                            <th>STATUS</th>
+                            <th>AÇÃO</th> <!-- Coluna para o botão salvar -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>12-11-2025 09:00</td>
+                            <td>1</td>
+                            <td>MARIA EDUARDA</td>
+                            <td>1</td>
+                            <td>DR. LUCIO</td>
+                            <td><input type="checkbox" class="check" checked></td>
+                            <td><button onclick="saveChanges(1)">Salvar</button></td> <!-- Botão de Salvar -->
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>12-11-2025 10:00</td>
+                            <td>2</td>
+                            <td>Arthur Oliveira</td>
+                            <td>2</td>
+                            <td>DR. ANA</td>
+                            <td><input type="checkbox" class="check" checked></td>
+                            <td><button onclick="saveChanges(2)">Salvar</button></td> <!-- Botão de Salvar -->
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>12-11-2025 11:00</td>
+                            <td>3</td>
+                            <td>Kauan Marques</td>
+                            <td>3</td>
+                            <td>DR. RENATO</td>
+                            <td><input type="checkbox" class="check" checked></td>
+                            <td><button onclick="saveChanges(3)">Salvar</button></td> <!-- Botão de Salvar -->
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>18-11-2025 11:00</td>
+                            <td>1</td>
+                            <td>MARIA EDUARDA</td>
+                            <td>1</td>
+                            <td>DR. LUCIO</td>
+                            <td><input type="checkbox" class="check" checked></td>
+                            <td><button onclick="saveChanges(4)">Salvar</button></td> <!-- Botão de Salvar -->
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>18-11-2025 11:00</td>
+                            <td>2</td>
+                            <td>Arthur Oliveira</td>
+                            <td>2</td>
+                            <td>DR. ANA</td>
+                            <td><input type="checkbox" class="check" checked></td>
+                            <td><button onclick="saveChanges(5)">Salvar</button></td> <!-- Botão de Salvar -->
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function saveChanges(consultaId) {
+            // Usando o índice para identificar o checkbox da linha
+            let checkbox = document.querySelectorAll(".check")[consultaId - 1]; // Pega o checkbox da linha correspondente
+            let status = checkbox.checked ? 'Confirmado' : 'Não confirmado';
+            alert("Alterações para a consulta " + consultaId + " salvas com sucesso! Status: " + status);
+        }
+    </script>
+</body>
+</html>

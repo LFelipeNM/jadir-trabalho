@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Dental Clinic</title>
+    <link rel="stylesheet" href="estiloadmin.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="logo">DENTAL<br>CLINIC</h1>
+            <h2 class="title">GERENCIAR USUÁRIOS</h2>
+            <div class="user-info">
+                <span>OLÁ, ADMIN</span>
+                <div class="icon">👤</div>
+                <a href="index.html" class="logout-btn">Sair</a>
+            </div>
+        </div>
+
+        <div class="content">
+            <h3>Lista de Usuários</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Função</th>
+                        <th>Ação</th> <!-- Coluna para as ações -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Linha do Dr. Lucio -->
+                    <tr>
+                        <td>1</td>
+                        <td>Dr. Lucio</td>
+                        <td>lucio123@dentalclinic.com</td>
+                        <td>Doutor</td>
+                        <td>
+                            <button onclick="editUser(1)">Editar</button>
+                            <button onclick="deleteUser(1)">Excluir</button>
+                        </td>
+                    </tr>
+                    <!-- Linha da Maria Eduarda -->
+                    <tr>
+                        <td>2</td>
+                        <td>Maria Eduarda</td>
+                        <td>maria.eduarda@dentalclinic.com</td>
+                        <td>Paciente</td>
+                        <td>
+                            <button onclick="editUser(2)">Editar</button>
+                            <button onclick="deleteUser(2)">Excluir</button>
+                        </td>
+                    </tr>
+                    <!-- Linha do Wendell -->
+                    <tr>
+                        <td>3</td>
+                        <td>Wendell</td>
+                        <td>wendell@dentalclinic.com</td>
+                        <td>Recepcionista</td>
+                        <td>
+                            <button onclick="editUser(3)">Editar</button>
+                            <button onclick="deleteUser(3)">Excluir</button>
+                        </td>
+                    </tr>
+                    <!-- Linha do Admin -->
+                    <tr>
+                        <td>4</td>
+                        <td>Admin</td>
+                        <td>adm@dentalclinic.com</td>
+                        <td>Admin/CEO</td>
+                        <td>
+                            <button onclick="editUser(4)">Editar</button>
+                            <button onclick="deleteUser(4)">Excluir</button>
+                        </td>
+                    </tr>
+                    <!-- Linha da Dra. Ana -->
+                    <tr>
+                        <td>5</td>
+                        <td>Dra. Ana</td>
+                        <td>ana@dentalclinic.com</td>
+                        <td>Doutora</td>
+                        <td>
+                            <button onclick="editUser(5)">Editar</button>
+                            <button onclick="deleteUser(5)">Excluir</button>
+                        </td>
+                    </tr>
+                    <!-- Linha do João Pedro -->
+                    <tr>
+                        <td>6</td>
+                        <td>João Pedro</td>
+                        <td>joao.pedro@dentalclinic.com</td>
+                        <td>Paciente</td>
+                        <td>
+                            <button onclick="editUser(6)">Editar</button>
+                            <button onclick="deleteUser(6)">Excluir</button>
+                        </td>
+                    </tr>
+                    <!-- Linha do Carlos Silva -->
+                    <tr>
+                        <td>7</td>
+                        <td>Carlos Silva</td>
+                        <td>carlos.silva@dentalclinic.com</td>
+                        <td>Recepcionista</td>
+                        <td>
+                            <button onclick="editUser(7)">Editar</button>
+                            <button onclick="deleteUser(7)">Excluir</button>
+                        </td>
+                    </tr>
+                    <!-- Linha do Pedro Alves -->
+                    <tr>
+                        <td>8</td>
+                        <td>Pedro Alves</td>
+                        <td>pedro.alves@dentalclinic.com</td>
+                        <td>Doutor</td>
+                        <td>
+                            <button onclick="editUser(8)">Editar</button>
+                            <button onclick="deleteUser(8)">Excluir</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // Função de edição de usuário
+        function editUser(userId) {
+            alert("Editar informações do usuário com ID: " + userId);
+            // Aqui você pode abrir um modal ou redirecionar para uma página de edição
+        }
+
+        // Função de exclusão de usuário
+        function deleteUser(userId) {
+            let confirmDelete = confirm("Tem certeza de que deseja excluir o usuário com ID: " + userId + "?");
+            if (confirmDelete) {
+                alert("Usuário com ID " + userId + " excluído com sucesso!");
+                // Aqui você pode adicionar a lógica para excluir o usuário do banco de dados
+            }
+        }
+    </script>
+</body>
+</html>
